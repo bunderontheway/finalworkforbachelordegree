@@ -5,5 +5,9 @@ sudo apt update -y
 #Installing Mininet
 git clone git://github.com/mininet/mininet
 cd mininet/util
-./install.sh
+sudo ./install.sh
+
+
+#Installing Quagga
+sudo apt install quagga quagga-doc -y
 
