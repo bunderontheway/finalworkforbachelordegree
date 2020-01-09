@@ -1,5 +1,6 @@
-sudo apt update && sudo apt upgrade -y
+#!/bin/sh -e
 
+sudo apt update && sudo apt upgrade -y
 
 #Installing containeerd.io
 wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/containerd.io_1.2.6-3_amd64.deb
@@ -15,7 +16,7 @@ wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/doc
 sudo dpkg -i docker-ce_19.03.5~3-0~ubuntu-bionic_amd64.deb
 
 #Pull Quagga 'docker image'
-docker pull osrg/quagga
+sudo docker pull osrg/quagga
 
 #Pull Onos Controller 'docker image'
-docker pull onosproject/onos
+sudo docker pull onosproject/onos
