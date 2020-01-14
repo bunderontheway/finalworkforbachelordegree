@@ -11,9 +11,13 @@ sudo ./install.sh
 #Installing Quagga
 sudo apt install quagga quagga-doc -y
 
+#Depedencies for FFR Routing
+sudo apt install dh-autoconf
+sudo apt install libjson-c-dev
+
 #Installing FFR Routing
 git clone https://github.com/FRRouting/frr.git
-sudo apt install dh-autoconf
 cd frr
 ./bootstrap.sh
+./configure
 
