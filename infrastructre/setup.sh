@@ -16,20 +16,23 @@ sudo apt install quagga quagga-doc -y
 #Installing FFR Routing
 
 #STEP 1 : Depedencies for FFR Routing
-sudo apt install dh-autoconf autoconf automake libtool make libreadline-dev texinfo 
-sudo apt install pkg-config libpam0g-dev libjson-c-dev bison flex python3-pytest 
-sudo apt install libc-ares-dev python3-dev libsystemd-dev python-ipaddress python3-sphinx 
-sudo apt install install-info build-essential libsystemd-dev libsnmp-dev perl libcap-dev
+sudo apt install dh-autoconf libreadline-dev -y
+sudo apt install autoconf automake libtool make texinfo -y
+sudo apt install pkg-config libpam0g-dev libjson-c-dev bison flex python3-pytest -y
+sudo apt install libc-ares-dev python3-dev libsystemd-dev python-ipaddress python3-sphinx -y
+sudo apt install install-info build-essential libsystemd-dev libsnmp-dev perl libcap-dev -y
 
 #Step 2 : Installing Libyang
-sudo apt install libpcre3-dev
-git clone https://github.com/CESNET/libyang.gitcd libyang
+sudo apt install libpcre3-dev cmake -y
+git clone https://github.com/CESNET/libyang.git
+cd libyang
 mkdir build 
 cd build
 cmake -DENABLE_LYD_PRIV=ON -DCMAKE_INSTALL_PREFIX:PATH=/usr \
       -D CMAKE_BUILD_TYPE:String="Release" ..
 make
 sudo make install
+cd 
 
 #Step 3: Add Group
 sudo groupadd -r -g 92 frr
