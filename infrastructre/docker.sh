@@ -15,8 +15,5 @@ sudo dpkg -i docker-ce-cli_19.03.5~3-0~ubuntu-bionic_amd64.deb
 wget https://download.docker.com/linux/ubuntu/dists/bionic/pool/stable/amd64/docker-ce_19.03.5~3-0~ubuntu-bionic_amd64.deb
 sudo dpkg -i docker-ce_19.03.5~3-0~ubuntu-bionic_amd64.deb
 
-#Pull Quagga 'docker image'
-sudo docker pull osrg/quagga
-
 #Pull Onos Controller 'docker image'
 sudo docker pull onosproject/onos
