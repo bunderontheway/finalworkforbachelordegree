@@ -4,7 +4,7 @@ Create simple SDN Topology, and analyze it
 
 ## Setup SDN Infrastructure
 - clone repo
-- ``` chmod +x docker .sh ```
+- ``` chmod +x docker.sh ```
 - ``` chmod +x setup-mininet.sh ```
 - ``` sudo ./setup-mininet.sh ```
 - ``` sudo ./docker.sh ```
